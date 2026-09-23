@@ -1,0 +1,50 @@
+USE skytrack_airline_db;
+
+UPDATE FLIGHT
+SET Status = 'Completed'
+WHERE Flight_Number = 'SK101';
+
+UPDATE FLIGHT
+SET Status = 'Cancelled'
+WHERE Flight_Number = 'SK102';
+
+UPDATE BOOKING
+SET Price_Paid = Price_Paid * 1.10
+WHERE Class = 'Economy';
+
+UPDATE PASSENGER
+SET Phone = '+96899112233'
+WHERE National_ID = 'OM10001';
+
+UPDATE CREW_MEMBER
+SET Role = 'Engineer'
+WHERE License_Number = 'LIC-C1003';
+
+SELECT * FROM FLIGHT
+WHERE Flight_Number = 'SK103';
+
+DELETE FROM FLIGHT
+WHERE Flight_Number = 'SK103';
+
+SELECT * FROM BOOKING
+WHERE Booking_ID = '4';
+
+DELETE FROM BOOKING
+WHERE Booking_ID = '4';
+
+SELECT * FROM PASSENGER
+WHERE National_ID = 'OM10001';
+
+DELETE FROM PASSENGER
+WHERE National_ID = 'OM10001';
+
+-- The passenger is deleted because BOOKING uses ON DELETE CASCADE.
+-- The related bookings are deleted automatically.
+
+SELECT * FROM AIRPORT;
+SELECT * FROM AIRCRAFT;
+SELECT * FROM PASSENGER;
+SELECT * FROM CREW_MEMBER;
+SELECT * FROM FLIGHT;
+SELECT * FROM BOOKING;
+SELECT * FROM FLIGHT_CREW;
