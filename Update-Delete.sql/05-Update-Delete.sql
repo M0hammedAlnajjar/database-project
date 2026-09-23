@@ -33,13 +33,13 @@ DELETE FROM BOOKING
 WHERE Booking_ID = '4';
 
 SELECT * FROM PASSENGER
-WHERE National_ID = 'OM10001';
+WHERE National_ID = 'NL10007';
 
 DELETE FROM PASSENGER
-WHERE National_ID = 'OM10001';
+WHERE National_ID = 'NL10007';
 
 -- The passenger is deleted because BOOKING uses ON DELETE CASCADE.
--- The related bookings are deleted automatically.
+-- The related booking is deleted automatically.
 
 SELECT * FROM AIRPORT;
 SELECT * FROM AIRCRAFT;
