@@ -99,3 +99,9 @@ SELECT * FROM CREW_MEMBER;
 SELECT * FROM FLIGHT;
 SELECT * FROM BOOKING;
 SELECT * FROM FLIGHT_CREW;
+USE skytrack_airline_db;
+
+INSERT INTO PASSENGER
+(National_ID, Full_Name, Email, Phone, Nationality, Date_Of_Birth)
+VALUES
+('OM10001', 'Ahmed Al Balushi', 'ahmed.balushi@example.com', '+96899112233', 'Omani', '1995-04-12');
